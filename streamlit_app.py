@@ -79,17 +79,17 @@ with tab1:
         fine_agg = st.slider("Agregado fino (kg/m³)", 500, 1000, 700, help="Agregado fino (arena)")
         age = st.slider("Edad (días)", 1, 90, 28, help="Edad del concreto para la prueba")
 
-# Crear DataFrame para el modelo
-entrada = pd.DataFrame([{
-    'Cement (component 1)(kg in a m^3 mixture)': cement,
-    'Blast Furnace Slag (component 2)(kg in a m^3 mixture)': slag,
-    'Fly Ash (component 3)(kg in a m^3 mixture)': fly_ash,
-    'Water  (component 4)(kg in a m^3 mixture)': water,
-    'Superplasticizer (component 5)(kg in a m^3 mixture)': superplasticizer,
-    'Coarse Aggregate  (component 6)(kg in a m^3 mixture)': coarse_agg,
-    'Fine Aggregate (component 7)(kg in a m^3 mixture)': fine_agg,
-    'Age (day)': age
-}])
+    # Crear DataFrame para el modelo
+    entrada = pd.DataFrame([{
+        'Cement (component 1)(kg in a m^3 mixture)': cement,
+        'Blast Furnace Slag (component 2)(kg in a m^3 mixture)': slag,
+        'Fly Ash (component 3)(kg in a m^3 mixture)': fly_ash,
+        'Water  (component 4)(kg in a m^3 mixture)': water,
+        'Superplasticizer (component 5)(kg in a m^3 mixture)': superplasticizer,
+        'Coarse Aggregate  (component 6)(kg in a m^3 mixture)': coarse_agg,
+        'Fine Aggregate (component 7)(kg in a m^3 mixture)': fine_agg,
+        'Age (day)': age
+    }])
 
     # Predicción
     if st.button("🔮 Predecir Resistencia", type="primary"):
