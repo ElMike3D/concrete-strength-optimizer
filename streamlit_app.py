@@ -62,7 +62,7 @@ tab1, tab2, tab3 = st.tabs(["📊 Predicción Manual", "🎯 Optimización Autom
 
 with tab1:
     st.markdown("### 🔧 Predicción Manual de Resistencia")
-st.markdown("Ajusta los ingredientes de tu mezcla y estima la resistencia del concreto.")
+    st.markdown("Ajusta los ingredientes de tu mezcla y estima la resistencia del concreto.")
 
     # Crear dos columnas para los sliders
     col1, col2 = st.columns(2)
@@ -91,9 +91,9 @@ entrada = pd.DataFrame([{
     'Age (day)': age
 }])
 
-# Predicción
+    # Predicción
     if st.button("🔮 Predecir Resistencia", type="primary"):
-    resultado = modelo.predict(entrada)[0]
+        resultado = modelo.predict(entrada)[0]
         
         # Mostrar resultado con métricas
         col1, col2, col3 = st.columns(3)
